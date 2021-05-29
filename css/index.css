@@ -1,0 +1,177 @@
+body{
+    background-color: #EFEFEF;
+    color: black;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.topNavBar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.topNavBar .banner .banner-list  li {
+    float: left;
+    list-style: none;
+    margin-left: 17px;
+    margin-right: 17px;
+}
+
+.topNavBar .banner .banner-list li > a{
+    color: #C2C4C6;
+    font-size: 12px;
+    font-weight: bolder;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.topNavBar .banner .banner-list li>a:hover{
+    border-bottom: 3px solid #D96F6F;
+}
+
+.topNavBar .banner{
+    float: right;
+    padding: 37px 0;
+}
+
+.topNavBar .logo{
+    font-family: "Arial Black", serif;
+    font-size: 24px;
+    display: block;
+    float: left;
+    padding: 30px 0;
+    margin-left: 13px;
+}
+
+.topNavBar .logo .rs{
+    color: #D96F6F;
+}
+
+.topNavBar .logo .logo-card{
+    color: #9B9DA2;
+}
+.background{
+    background-image: url("../img/bg.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 512px;
+
+}
+.background .shade {
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+
+
+.myCard{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 940px;
+    background: #FFFFFF;
+}
+
+.myCard .pictureAndProfile {
+    height: 442px;
+
+}
+.myCard .pictureAndProfile .picture{
+    float: left;
+    margin-top: 50px;
+    margin-left: 45px;
+}
+
+.myCard .pictureAndProfile .profile{
+    float: left;
+    margin-top: 50px;
+    margin-left: 45px;
+    width: 470px;
+}
+.myCard .pictureAndProfile .profile .hello{
+    display: inline-block;
+    background: #D96F6F;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 3px 15px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.myCard .pictureAndProfile .picture .avatar{
+    height: 347px;
+    width: 299px;
+
+    border-bottom: 1px solid transparent;
+}
+.triangle {
+    display: inline-block;
+    border-bottom: 10px solid transparent;
+    border-left: 13px solid #D96F6F;;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+}
+
+.myCard hr{
+    height: 0;
+    border: none;
+    border-top: 1px solid #DEDEDE;
+    margin-top: 12px;
+}
+
+.myCard .profile dt,
+.myCard .profile dd{
+    float: left;
+    margin-top: 20px;
+}
+.myCard .profile dt{
+    width: 40%;
+    font-weight: bolder;
+}
+
+.myCard .profile dd{
+    width: 60%;
+    color: #9da0a7;
+}
+
+.media{
+    background: #D96F6F;
+    text-align: center;
+    padding: 40px 40px;
+}
+.media a {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    /*line-height: 40px;*/
+    margin: 0 20px;
+}
+
+.media a:hover{
+    border-radius: 50%;
+    background: #C36464;
+}
+
+.media a svg{
+    width: 2em; height: 2em;
+    vertical-align: -0.15em;
+    overflow: hidden;
+    vert-align: top;
+    fill: #FFFFFF;
+}
