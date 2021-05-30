@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>My Resume</title>
     <link rel="stylesheet" href="css/index.css">
-    <script src="//at.alicdn.com/t/font_2579541_619em8wgsae.js"></script>
+    <script src="https://at.alicdn.com/t/font_2579541_619em8wgsae.js"></script>
 </head>
 <body>
     <div class="topNavBar clearfix">
@@ -26,6 +26,7 @@
     </div>
     <div class="background"><div class="shade"></div></div>
     <main>
+<!--        个人资料-->
         <div class="myCard">
             <div class="pictureAndProfile clearfix">
                 <div class="picture">
@@ -78,11 +79,77 @@
                 </a>
             </footer>
         </div>
-        <a href="" class="">下载简历</a>
-        <p>Hello，我是刘彬，Devops工程师 <br>
-            专注于ops，docker，k8s和golang。
+<!--        下载-->
+        <div class="downloadWrapper"><a href="./img/resume.png" class="downloadResume" target="_blank" download>下 载 简 历</a></div>
+<!--        个人介绍-->
+        <p class="introduce"> Hello！我是刘彬，从事运维工作已经5年了，现在主要专注于Ops、K8S、Docker、golang、monitoring，ELK stack，
+            有丰富的k8s落地和CI/CD经验，近一年主要研究k8s周边的组件，比如operator、Prometheus、Thanos和Calico等，
+            空闲的时候，也会写一写前端代码。
         </p>
+<!--        个人技能-->
+        <section>
+            <h2 class="skillTitle">个人技能</h2>
+            <div class="skill">
+                <ol class="skillList clearfix">
+                    <li>
+                        <h3>kubernetes</h3>
+                        <div class="progressBarWrapper"><div class="progressBar" style="width: 90%"></div></div>
+                    </li>
+                    <li>
+                        <h3>docker</h3>
+                        <div class="progressBarWrapper"><div class="progressBar" style="width: 95%"></div></div>
+                    </li>
+                    <li>
+                        <h3>golang</h3>
+                        <div class="progressBarWrapper"><div class="progressBar" style="width: 60%" ></div></div>
+                    </li>
+                    <li>
+                        <h3>Prometheus</h3>
+                        <div class="progressBarWrapper"><div class="progressBar" style="width: 80%"></div></div>
+                    </li>
+                    <li>
+                        <h3>Istio</h3>
+                        <div class="progressBarWrapper"><div class="progressBar" style="width: 50%"></div></div>
+                    </li>
+                    <li>
+                        <h3>Vue</h3>
+                        <div class="progressBarWrapper"><div class="progressBar" style="width: 60%"></div></div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+<!--        作品集-->
+        <section>
+            <h2 class="portfolioTitle">作品集</h2>
+            <div class="portfolioWrapper">
+                <nav class="portfolio">
+                    <ul class="bannerItem clearfix">
+                        <li id="all">ALL</li>
+                        <li id="Photography">PHOTOGRAPHY</li>
+                        <li id="design">UX DESIGN</li>
+                    </ul>
+                    <div class="seekBarWrapper"><div id="bar" class="seekBar c1"></div></div>
 
+<!--                    简单的滑动条js-->
+                    <script>
+                        document.getElementById("all").onclick = function () {
+                            document.getElementById("bar").setAttribute("class","seekBar c1")
+                        }
+                        document.getElementById("Photography").onclick = function () {
+                            document.getElementById("bar").setAttribute("class", "seekBar c2")
+                        }
+                        document.getElementById("design").onclick = function () {
+                            document.getElementById("bar").setAttribute("class","seekBar c3")
+                        }
+                    </script>
+                </nav>
+            </div>
+            <div class="portfolios">
+                <div class="pf p1"><img src="./img/p1.jpg" alt=""></div>
+                <div class="pf p2"><img src="./img/p2.jpg" alt=""></div>
+                <div class="pf p3"><img src="./img/p3.jpg" alt=""></div>
+            </div>
+        </section>
 
     </main>
 </body>

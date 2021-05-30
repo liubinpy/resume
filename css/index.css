@@ -7,6 +7,13 @@ body{
 a {
     text-decoration: none;
 }
+ol,ul{
+    list-style: none;
+}
+
+h1,h1,h3,h4,h5,h6{
+    font-style: normal;
+}
 
 * {
     margin: 0;
@@ -78,13 +85,17 @@ a {
     background: rgba(0,0,0,0.6);
 }
 
-
-
+main{
+    max-width: 940px;
+    margin: auto auto;
+}
 .myCard{
     margin-left: auto;
     margin-right: auto;
-    max-width: 940px;
+    /*max-width: 940px;*/
     background: #FFFFFF;
+    margin-top: -340px;
+    box-shadow: 0 6px 10px -5px rgba(0,0,0,0.77);
 }
 
 .myCard .pictureAndProfile {
@@ -174,4 +185,157 @@ a {
     overflow: hidden;
     vert-align: top;
     fill: #FFFFFF;
+}
+
+.downloadWrapper {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.downloadWrapper .downloadResume{
+    border: 2px solid #DEDFE0;
+    color: #3E4450;
+    font-weight: bold;
+    line-height: 1.1;
+    display: inline-block;
+    padding: 20px 70px;
+    border-radius: 5px;
+}
+
+.downloadWrapper .downloadResume:hover{
+    box-shadow: 0 6px 10px -5px rgba(0,0,0,0.77);
+    transition: all 0.5s
+}
+.introduce {
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: Kai, serif;
+    margin-top: 40px;
+}
+
+section .skillTitle,
+section .portfolioTitle{
+    text-align: center;
+    font-size: 34px;
+    font-weight: normal;
+    margin-top: 70px;
+}
+section .skill{
+    margin-top: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px -5px rgba(0,0,0,1);
+    padding: 40px 50px;
+    border-radius: 5px;
+}
+
+section .skill .skillList li{
+    float: left;
+    width: 48%;
+    margin-bottom: 30px;
+}
+
+section .skill .skillList li:nth-child(even){
+    float: right;
+}
+section .skill .skillList li h3{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Open Sans", serif;
+    color: #3d4451;
+}
+
+section .skill .skillList .progressBarWrapper{
+    height: 5px;
+    background: #F7E2E2;
+    margin-top: 5px;
+    border-radius: 3px;
+}
+
+section .skill .skillList .progressBarWrapper .progressBar{
+    height: 5px;
+    background: #D96F6F;
+    width: 50%;
+    border-radius: 3px;
+
+}
+
+section .portfolio{
+
+    margin-top: 30px;
+    display: inline-block;
+}
+
+section .portfolio ul{
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+section .portfolio .bannerItem li{
+    float: left;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 20px;
+}
+
+section .portfolio .bannerItem li:hover{
+    cursor: pointer;
+}
+
+section .portfolioWrapper{
+    text-align: center;
+}
+
+section .seekBarWrapper{
+    background: #FFFFFF;
+    height: 5px;
+    border-radius: 2px;
+    margin-top: 10px;
+    position: relative;
+}
+section .seekBarWrapper .seekBar{
+    height: 5px;
+    background: #D96F6E;
+    border-radius: 2px;
+    position: absolute;
+}
+section .seekBarWrapper .seekBar.c1{
+    width: 70px;
+}
+
+section .seekBarWrapper .seekBar.c2{
+    width: 90px;
+    left: 80px;
+}
+
+section .seekBarWrapper .seekBar.c3{
+    width: 90px;
+    right: 0;
+}
+
+section .portfolios{
+    margin-top: 20px;
+    position: relative;
+    height: 576px;
+    margin-bottom: 100px;
+}
+section .portfolios .pf{
+    position: absolute;
+
+}
+section .portfolios .pf img{
+    box-shadow: 0px 0px 10px -5px rgba(0,0,0,1);
+}
+section .portfolios .p1{
+    left: 0;
+    top: 0;
+}
+section .portfolios  .p2{
+    right: 0;
+    top: 0;
+}
+section .portfolios  .p3{
+    right: 0;
+    bottom: 0;
 }
