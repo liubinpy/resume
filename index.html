@@ -3,22 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>My Resume</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="https://at.alicdn.com/t/font_2579541_619em8wgsae.js"></script>
 </head>
 <body>
-    <div class="topNavBar clearfix">
+    <div id="site-loading" class="site-loading active">
+        <div class="loading">
+        </div>
+    </div>
+    <div id="top-nav-bar" class="topNavBar clearfix">
         <a class="logo" href="">
             <span class="rs">RS</span>
             <span class="logo-card">card</span>
         </a>
         <nav class="banner">
             <ul class="banner-list clearfix">
-                <li><a href="">关于我</a></li>
-                <li><a href="">技能</a></li>
-                <li><a href="">作品</a></li>
+                <li><a id="jump-about-me" href="#abount-me">关于我</a></li>
+                <li><a id="jump-skills" href="#skills">技能</a></li>
+                <li id="menu-list" class="menuList"><a id="jump-protfolios" href="#portfolios">作品</a>
+                    <ul>
+                       <li>作品1</li>
+                       <li>作品2</li>
+                       <li>作品3</li>
+                    </ul>
+                </li>
                 <li><a href="">经验</a></li>
-                <li><a href="">博客</a></li>
+                <li id="menu-list" class="menuList"><a href="">博客</a>
+                    <ul>
+                        <li>博客1</li>
+                        <li>博客2</li>
+                        <li>博客3</li>
+                     </ul>
+                </li>
                 <li><a href="">履历</a></li>
                 <li><a href="">其他</a></li>
             </ul>
@@ -27,7 +43,7 @@
     <div class="background"><div class="shade"></div></div>
     <main>
 <!--        个人资料-->
-        <div class="myCard">
+        <div id="abount-me" class="myCard">
             <div class="pictureAndProfile clearfix">
                 <div class="picture">
                     <img class="avatar" src="./img/avatar.png" alt="头像">
@@ -82,13 +98,13 @@
 <!--        下载-->
         <div class="downloadWrapper"><a href="./img/resume.png" class="downloadResume" target="_blank" download>下 载 简 历</a></div>
 <!--        个人介绍-->
-        <p class="introduce"> Hello！我是刘彬，从事运维工作已经5年了，现在主要专注于Ops、K8S、Docker、golang、monitoring，ELK stack，
+        <p class="introduce"> Hello！我是刘彬，从事运维工作已经5年了，现在主要专注于Ops、K8S、istio、Docker、golang、monitoring，ELK stack，
             有丰富的k8s落地和CI/CD经验，近一年主要研究k8s周边的组件，比如operator、Prometheus、Thanos和Calico等，
             空闲的时候，也会写一写前端代码。
         </p>
 <!--        个人技能-->
         <section>
-            <h2 class="skillTitle">个人技能</h2>
+            <h2 id="skills" class="skillTitle">个人技能</h2>
             <div class="skill">
                 <ol class="skillList clearfix">
                     <li>
@@ -120,7 +136,7 @@
         </section>
 <!--        作品集-->
         <section>
-            <h2 class="portfolioTitle">作品集</h2>
+            <h2 id="portfolios" class="portfolioTitle">作品集</h2>
             <div class="portfolioWrapper">
                 <nav class="portfolio">
                     <ul class="bannerItem clearfix">
@@ -152,5 +168,6 @@
         </section>
 
     </main>
+    <script src="js/index.js"></script>
 </body>
 </html>

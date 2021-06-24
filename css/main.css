@@ -31,30 +31,99 @@ h1,h1,h3,h4,h5,h6{
     left: 0;
     top: 0;
     width: 100%;
+    z-index: 1;
+    padding: 20px 0;
+    transition: all 1s;
+    color: #C2C4C7;
 }
 
-.topNavBar .banner .banner-list  li {
+.topNavBar.active{
+    background: #FFFFFF;
+    color: #3E4450;
+    padding: 10px 0;
+    box-shadow: 0px 3px 4px 0px #000000;
+}
+
+.topNavBar .banner .banner-list > li {
     float: left;
     list-style: none;
-    margin-left: 17px;
-    margin-right: 17px;
+    padding: 0 17px;
 }
 
-.topNavBar .banner .banner-list li > a{
-    color: #C2C4C6;
+.topNavBar .banner .banner-list > li > a{
+    color: inherit;
     font-size: 12px;
     font-weight: bolder;
-    display: inline-block;
-    padding-bottom: 4px;
+    display: block;
+    position: relative;
 }
 
-.topNavBar .banner .banner-list li>a:hover{
-    border-bottom: 3px solid #D96F6F;
+.topNavBar .banner .banner-list > li > a:hover:after{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: #CB7572;
+    animation-name: slidel2r;
+    animation-duration: 1s;
+    position: absolute ;
+    top: 100%;
+    left: 0;
+}
+
+@keyframes slidel2r {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+} 
+
+.banner-list > li {
+    position: relative;
+}
+.banner-list > li > ul{
+    position: absolute;
+    top: 130%;
+    white-space: nowrap;
+    display: none;
+    animation-name: menulistl2r;
+    animation-duration: 1s;
+    
+    /* padding: 0 10px; */
+}
+
+.banner-list > li > ul.active{
+    display: block;
+}
+
+@keyframes menulistl2r {
+    from {
+      right: 100%;
+    }
+    to {
+      right: 0;
+    }
+} 
+.banner-list > li > ul > li{
+    background-color: #343A42;
+    padding: 8px 5px;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+}
+
+.banner-list > li > ul > li:hover {
+    cursor: pointer;
+    color: #CB7572;
 }
 
 .topNavBar .banner{
     float: right;
-    padding: 37px 0;
+    /* line-height: 100%; */
+    padding: 14px 0;
 }
 
 .topNavBar .logo{
@@ -62,7 +131,7 @@ h1,h1,h3,h4,h5,h6{
     font-size: 24px;
     display: block;
     float: left;
-    padding: 30px 0;
+    padding: 6px 0;
     margin-left: 13px;
 }
 
@@ -92,7 +161,6 @@ main{
 .myCard{
     margin-left: auto;
     margin-right: auto;
-    /*max-width: 940px;*/
     background: #FFFFFF;
     margin-top: -340px;
     box-shadow: 0 6px 10px -5px rgba(0,0,0,0.77);
@@ -183,7 +251,7 @@ main{
     width: 2em; height: 2em;
     vertical-align: -0.15em;
     overflow: hidden;
-    vert-align: top;
+    vertical-align: top;
     fill: #FFFFFF;
 }
 
@@ -339,3 +407,60 @@ section .portfolios  .p3{
     right: 0;
     bottom: 0;
 }
+
+.site-loading.active{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-loading{
+    display: none;
+}
+
+.loading{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+  
+  
+.loading::before,.loading::after{
+    content: "";
+    animation-name: slidein;
+    background-color: #000;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    position: absolute;
+    top: 0;
+    right:0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 50%;
+}
+  
+.loading::after{
+    animation-delay: 0.5s;
+}
+  
+@keyframes slidein {
+    from {
+      width: 0px;
+      height: 0px;
+      opacity: 1;
+    }
+  
+    to {
+      width: 100px;
+      height: 100px;
+      opacity: 0;
+    }
+} 
+  
