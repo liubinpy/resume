@@ -5,6 +5,7 @@
     <title>My Resume</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://at.alicdn.com/t/font_2579541_619em8wgsae.js"></script>
+    <script src="https://cdn.staticfile.org/tween.js/0.11.0/Tween.min.js"></script>
 </head>
 <body>
     <div id="site-loading" class="site-loading active">
@@ -42,8 +43,11 @@
     </div>
     <div class="background"><div class="shade"></div></div>
     <main>
+        <div>
+            
+        </div>
 <!--        个人资料-->
-        <div id="abount-me" class="myCard">
+        <div data-x id="abount-me" class="myCard">
             <div class="pictureAndProfile clearfix">
                 <div class="picture">
                     <img class="avatar" src="./img/avatar.png" alt="头像">
@@ -103,8 +107,8 @@
             空闲的时候，也会写一写前端代码。
         </p>
 <!--        个人技能-->
-        <section>
-            <h2 id="skills" class="skillTitle">个人技能</h2>
+        <section data-x id="skills" >
+            <h2  class="skillTitle">个人技能</h2>
             <div class="skill">
                 <ol class="skillList clearfix">
                     <li>
@@ -135,7 +139,7 @@
             </div>
         </section>
 <!--        作品集-->
-        <section>
+        <section data-x id="portfolios" >
             <h2 id="portfolios" class="portfolioTitle">作品集</h2>
             <div class="portfolioWrapper">
                 <nav class="portfolio">
@@ -166,8 +170,10 @@
                 <div class="pf p3"><img src="./img/p3.jpg" alt=""></div>
             </div>
         </section>
+        <footer style="height: 100px;"></footer>
 
     </main>
+
     <script src="js/index.js"></script>
 </body>
 </html>
